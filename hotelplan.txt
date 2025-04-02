@@ -1,0 +1,10 @@
+Objective:
+  This site is used to book rooms for people 
+
+Feature:
+Users{
+    1.Admin
+    2. Guest
+    3. Moderator
+}
+
