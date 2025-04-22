@@ -17,54 +17,54 @@ session_start();
     <title>Document</title>
 </head>
 <style>
-    body {
-        background-image: url(photo/home-about.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100%;
-        width: 100vw;
-    }
+body {
+    background-image: url(photo/home-about.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100vw;
+}
 
-    .card-head {
-        background-color: #0DCAF0;
-        height: 50px;
-    }
+.card-head {
+    background-color: #0DCAF0;
+    height: 50px;
+}
 
-    .card {
-        height: 500px;
-    }
+.card {
+    height: 500px;
+}
 
-    #navbar {
-        position: fixed;
-    }
+#navbar {
+    position: fixed;
+}
 
-    .control {
-        margin-bottom: 0px;
-    }
+.control {
+    margin-bottom: 0px;
+}
 
-    .about {
-        margin-bottom: 0px;
-        display: flex;
+.about {
+    margin-bottom: 0px;
+    display: flex;
 
-    }
+}
 
-    .space {
-        height: 320px;
-    }
+.space {
+    height: 320px;
+}
 
-    #navbar {
-        position: fixed;
-        z-index: 9;
-    }
+#navbar {
+    position: fixed;
+    z-index: 9;
+}
 
-    .shadow {
-        border: 2px solid blue;
-    }
+.shadow {
+    border: 2px solid blue;
+}
 </style>
 
 <body>
     <!-- <?php include("spinner.php") ?> -->
-    <div class="container-fluid fs-3 w-100 ">
+    <div class="container-fluid  w-100 ">
         <div class="row  w-100">
             <div>
                 <h3> <?= $success ?? null; ?></h3>
@@ -85,6 +85,7 @@ session_start();
                             <a class="nav-link" href="#">Recreational Services </a>
                             <a class="nav-link" href="#">Event </a>
                             <a class="nav-link" href="#"> Gallery </a>
+                            <a class="nav-link" href="bookinglogin1.php"> <b>List a property</b> </a>
                             <a class="nav-link float-end" href="hotelsignin.php"> <b> My Account</b> </a>
                         </div>
                     </div>
@@ -115,7 +116,7 @@ session_start();
                             <input type="file" class="form-control" id=""> -->
                             <div class="text-center">
                                 <button type="submit" class="btn text-center mx-auto btn-primary mt-2">
-                                    <h3>Submit</h3>
+                                    <h5>Submit</h5>
                                 </button>
                                 <br>
                                 <a href="hotelupdate.php" class="mt-2 text-center mx-auto"> sign up </a>

@@ -19,26 +19,26 @@ if (isset($_GET["book"])) {
     <title>Document</title>
 </head>
 <style>
-    .shadow {
-        border-radius: 10px;
-        border: 3px solid blue;
-    }
+.shadow {
+    border-radius: 10px;
+    border: 3px solid blue;
+}
 
-    .na {
-        position: fixed;
-        z-index: 9;
-    }
+.na {
+    position: fixed;
+    z-index: 9;
+}
 
-    .pic {
-        width: 100%;
-    }
+.pic {
+    width: 100%;
+}
 </style>
 
 <body>
     <div class="container-fluid na ">
         <div class="row">
             <div class="col-12">
-                <div class="fs-2">
+                <div class="">
                     <nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary">
                         <div class="container-fluid">
                             <a class="navbar-brand" href="hotelupdate.php"> <b>MARVELUXE APARTMENT & GRILLS</b> </a>
@@ -55,6 +55,7 @@ if (isset($_GET["book"])) {
                                     <a class="nav-link" href="#">Recreational Services </a>
                                     <a class="nav-link" href="#">Event </a>
                                     <a class="nav-link" href="#"> Gallery </a>
+                                    <a class="nav-link" href="bookinglogin1.php"> <b>List a property</b> </a>
                                     <a class="nav-link float-end" href="hotelsignin.php"> <b> My Account</b> </a>
                                 </div>
                             </div>
@@ -65,13 +66,13 @@ if (isset($_GET["book"])) {
         </div>
     </div>
 
-    <div class="container-fluid fs-4    ">
+    <div class="container-fluid     ">
         <div class="row p-1  ">
 
             <div class="col-sm-12 col-md-6 col-lg-3 mt-5 mx-auto">
                 <div class="card mt-5 ">
                     <div class="card-head">
-                        <h1 class="text-center bg-warning"> <b> Please fill in the info to make a booking</b></h1>
+                        <h3 class="text-center bg-warning"> <b> Please fill in the info to make a booking</b></h3>
 
                     </div>
                     <div class="card-body  bg-info shadow">
@@ -90,7 +91,7 @@ if (isset($_GET["book"])) {
                             <br>
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary mx-auto">
-                                    <h3 class=""> Continue to payment method</h3>
+                                    <h5 class=""> Continue to payment method</h5>
                                 </button>
                             </div>
 
@@ -103,61 +104,61 @@ if (isset($_GET["book"])) {
 
             <div class="col-sm-12 col-md-6 col-lg-9 mx-auto text-center">
                 <?php for ($i = 0; $i < 1; $i++): ?>
-                    <div class="card mx-auto mt-5">
-                        <div class="card-head w-100 bg-info">
-                            <div class="mt-5">
-                                <h1 class="text-center"> Available room <?= $i ?></h1>
-                            </div>
+                <div class="card mx-auto mt-5">
+                    <div class="card-head w-100 bg-info">
+                        <div class="mt-5">
+                            <h1 class="text-center"> Available room <?= $i +1 ?></h1>
                         </div>
-                        <!-- <div class="card-image"></div> -->
+                    </div>
+                    <!-- <div class="card-image"></div> -->
 
-                        <div class="card-body">
-                            <div class="shadow p-2 d-lg-block d-sm-block d-md-block  ">
-                                <div><img src="fileimage/<?= $booked["image"] ?>" width="" class="pic " height="" alt=""
-                                        srcset="">
+                    <div class="card-body">
+                        <div class="shadow p-2 d-lg-block d-sm-block d-md-block  ">
+                            <div><img src="fileimage/<?= $booked["image"] ?>" width="" class="pic " height="" alt=""
+                                    srcset="">
+                            </div>
+                            <div class="text-center">
+                                <H2 class="mx-5"> Room type: <b class="text-primary"> <?= $booked["roomname"] ?></b>
+                                </H2>
+                            </div>
+                            <div class="divide d-flex  text-center mx-auto">
+                                <div class="col-md-6  col-sm-12">
+
+                                    <h4 class="my-2"><?= $booked["description"] ?></h4>
+
+                                    <br>
+
+                                    <h3> All deluxe rooms feature a personal safe, minibar and a working desk</h3>
+
+                                    <ul>
+                                        <li>Room: 29.68 m2 </li>
+                                        <li> Bathroom: 6.82 m2</li>
+
+                                    </ul>
+                                    <br>
+
+
                                 </div>
-                                <div class="text-center">
-                                    <H2 class="mx-5"> Room type: <b class="text-primary"> <?= $booked["roomname"] ?></b>
-                                    </H2>
-                                </div>
-                                <div class="divide d-flex  text-center mx-auto">
-                                    <div class="col-md-6  col-sm-12">
-
-                                        <h4 class="my-2"><?= $booked["description"] ?></h4>
-
-                                        <br>
-
-                                        <h3> All deluxe rooms feature a personal safe, minibar and a working desk</h3>
-
-                                        <ul>
-                                            <li>Room: 29.68 m2 </li>
-                                            <li> Bathroom: 6.82 m2</li>
-
-                                        </ul>
-                                        <br>
-
-
-                                    </div>
-                                    <div class="col-md-6 col-sm-12">
-                                        <h2>Room feature</h2>
-                                        Double king bed
-                                        <br>
-                                        Breakfast
-                                        <br>
-                                        Air conditioning
-                                        <br>
-                                        Mini bar
-                                        <br>
-                                        Wi-Fi service
-                                        <br>
-                                        Free parking
-                                        <br>
-                                        <h3 class="mt-5"> Price: <?= $booked["price"] ?></h3>
-                                    </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <h2>Room feature</h2>
+                                    Double king bed
+                                    <br>
+                                    Breakfast
+                                    <br>
+                                    Air conditioning
+                                    <br>
+                                    Mini bar
+                                    <br>
+                                    Wi-Fi service
+                                    <br>
+                                    Free parking
+                                    <br>
+                                    <h3 class="mt-5"> Price: <?= $booked["price"] ?></h3>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
 
 

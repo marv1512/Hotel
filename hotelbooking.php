@@ -17,28 +17,29 @@ $messages = read("room.txt");
 </head>
 
 <style>
-    body {
-        /* background-image: url(photo/home-about.jpg); */
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 100vh;
-        width: 100vw;
-    }
+body {
+    /* background-image: url(photo/home-about.jpg); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
 
-    /* .pic {
+/* .pic {
        
     } */
 
-    #navbar {
-        /* position: fixed; */
-    }
+#navbar {
+    /* position: fixed; */
+    /* margin-top: 0; */
+}
 
-    /* #flow {
+/* #flow {
       
         width: 60%;
         height: 100%;
     } */
-    /* 
+/* 
     @media screen and (max-width: 450px) {
         .flow {
             width: 100vw;
@@ -48,52 +49,52 @@ $messages = read("room.txt");
 
       
     } */
-    .card {
-        /* width: 450px; */
-        width: 100%;
-        align-items: center;
+.card {
+    /* width: 450px; */
+    width: 100%;
+    align-items: center;
+}
+
+@media screen and (min-width: 451px) {
+    .flow {
+        width: 60%;
+
     }
-
-    @media screen and (min-width: 451px) {
-        .flow {
-            width: 60%;
-
-        }
-    }
+}
 
 
 
 
-    .divide {
-        /* width: 700px; */
-    }
+.divide {
+    /* width: 700px; */
+}
 
-    .shadow {
-        border-radius: 15px;
-        border-color: aqua;
-        border: 2px solid blue;
-    }
+.shadow {
+    border-radius: 15px;
+    border-color: aqua;
+    border: 2px solid blue;
+}
 
-    .pic {
-        width: 100%;
-        border-radius: 10px;
-    }
+.pic {
+    width: 100%;
+    border-radius: 10px;
+}
 
-    /* .footer {
+/* .footer {
     width: 100%;
 } */
-    .na {
-        position: fixed;
-        z-index: 9;
-    }
+.na {
+    position: fixed;
+    z-index: 9;
+}
 </style>
 
 
 <body>
 
-    <div class="container-fluid  fs-2">
+    <div class="container-fluid ">
         <div class="row ">
-            <div class="col-12 na">
+            <div class="col-12 na mt-0">
                 <div>
                     <div>
                         <h3> <?= $success ?? null; ?></h3>
@@ -114,6 +115,7 @@ $messages = read("room.txt");
                                     <a class="nav-link" href="#">Recreational Services </a>
                                     <a class="nav-link" href="#">Event </a>
                                     <a class="nav-link" href="#"> Gallery </a>
+                                    <a class="nav-link" href="bookinglogin1.php"> <b>List a property</b> </a>
                                     <a class="nav-link float-end" href="hotelsignin.php"> <b> My Account</b> </a>
                                 </div>
                             </div>
@@ -124,7 +126,7 @@ $messages = read("room.txt");
         </div>
     </div>
 
-    <div class="container-fluid mt-5  fs-3 ">
+    <div class="container-fluid mt-5  ">
         <div class="row   p-3">
             <div class="col-sm-12 col-md-6 col-lg-3 mx-auto  p-1 mt-5">
                 <div class="card shadow  mt-5">
@@ -178,63 +180,63 @@ $messages = read("room.txt");
                 <?php $num = 1 ?>
                 <h2 class="mb-3 text-center">This is the Available number of room: <?= count($messages); ?></h2>
                 <?php foreach ($messages as $key => $item): ?>
-                    <div class="card mx-auto">
-                        <div class="card-head w-100 bg-info">
-                            <div class="mt-5">
-                                <h1 class="text-center"> Available room <?= $num++ ?></h1>
-                            </div>
+                <div class="card mx-auto">
+                    <div class="card-head w-100 bg-info">
+                        <div class="mt-5">
+                            <h1 class="text-center"> Available room <?= $num++ ?></h1>
                         </div>
-                        <!-- <div class="card-image"></div> -->
+                    </div>
+                    <!-- <div class="card-image"></div> -->
 
-                        <div class="card-body">
-                            <div class="shadow p-2 d-lg-flex d-sm-block d-md-block  ">
-                                <div><img src="fileimage/<?= $item["image"] ?>" width="" class="pic" height="400px" alt=""
-                                        srcset="">
+                    <div class="card-body">
+                        <div class="shadow p-2 d-lg-flex d-sm-block d-md-block  ">
+                            <div><img src="fileimage/<?= $item["image"] ?>" width="" class="pic" height="400px" alt=""
+                                    srcset="">
+                            </div>
+                            <div class="text-center">
+                                <H2 class="mx-5"> Room type: <b class="text-primary"> <?= $item["roomname"] ?></b></H2>
+                            </div>
+                            <div class="divide d-flex  text-center mx-auto">
+                                <div class="col-md-6  col-sm-12">
+
+                                    <h4 class="my-2"><?= $item["description"] ?></h4>
+
+                                    <br>
+
+                                    <h3> All deluxe rooms feature a personal safe, minibar and a working desk</h3>
+
+                                    <ul>
+                                        <li>Room: 29.68 m2 </li>
+                                        <li> Bathroom: 6.82 m2</li>
+
+                                    </ul>
+                                    <br>
+                                    <a href="bookroom.php?book=<?= $key ?>"><button type="submit"
+                                            class="btn btn-lg btn-primary">
+                                            Book room
+                                        </button></a>
+
                                 </div>
-                                <div class="text-center">
-                                    <H2 class="mx-5"> Room type: <b class="text-primary"> <?= $item["roomname"] ?></b></H2>
-                                </div>
-                                <div class="divide d-flex  text-center mx-auto">
-                                    <div class="col-md-6  col-sm-12">
-
-                                        <h4 class="my-2"><?= $item["description"] ?></h4>
-
-                                        <br>
-
-                                        <h3> All deluxe rooms feature a personal safe, minibar and a working desk</h3>
-
-                                        <ul>
-                                            <li>Room: 29.68 m2 </li>
-                                            <li> Bathroom: 6.82 m2</li>
-
-                                        </ul>
-                                        <br>
-                                        <a href="bookroom.php?book=<?= $key ?>"><button type="submit"
-                                                class="btn btn-lg btn-primary">
-                                                Book room
-                                            </button></a>
-
-                                    </div>
-                                    <div class="col-md-6 col-sm-12">
-                                        <h2>Room feature</h2>
-                                        Double king bed
-                                        <br>
-                                        Breakfast
-                                        <br>
-                                        Air conditioning
-                                        <br>
-                                        Mini bar
-                                        <br>
-                                        Wi-Fi service
-                                        <br>
-                                        Free parking
-                                        <br>
-                                        <h3 class="mt-5"> Price: <?= $item["price"] ?></h3>
-                                    </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <h2>Room feature</h2>
+                                    Double king bed
+                                    <br>
+                                    Breakfast
+                                    <br>
+                                    Air conditioning
+                                    <br>
+                                    Mini bar
+                                    <br>
+                                    Wi-Fi service
+                                    <br>
+                                    Free parking
+                                    <br>
+                                    <h3 class="mt-5"> Price: <?= $item["price"] ?></h3>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
 
 
@@ -245,7 +247,7 @@ $messages = read("room.txt");
         <div class="row">
             <div class="col-sm-12 col-lg-12   text-center">
                 <button class=" btn btn-lg my-3 rounded-pill bg-success text-light">
-                    <h2>List your property</h2>
+                    <h2><a href="bookinglogin1.php" class="text-light">List your property</a></h2>
                 </button>
             </div>
         </div>

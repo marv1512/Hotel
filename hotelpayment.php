@@ -20,21 +20,21 @@ if ($_SERVER["REQUEST_METHOD"] = "POST") {
 </head>
 
 <style>
-    .na {
-        position: fixed;
-        z-index: 9;
-    }
+.na {
+    position: fixed;
+    z-index: 9;
+}
 
-    .card {
-        border: 1px solid blue;
-    }
+.card {
+    border: 1px solid blue;
+}
 </style>
 
 <body>
     <div class="container-fluid na">
         <div class="row">
             <div class="col-12">
-                <div class="fs-2">
+                <div class="">
                     <nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary">
                         <div class="container-fluid">
                             <a class="navbar-brand" href="hotelupdate.php"> <b>MARVELUXE APARTMENT & GRILLS</b> </a>
@@ -51,6 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] = "POST") {
                                     <a class="nav-link" href="#">Recreational Services </a>
                                     <a class="nav-link" href="#">Event </a>
                                     <a class="nav-link" href="#"> Gallery </a>
+                                    <a class="nav-link" href="bookinglogin1.php"> <b>List a property</b> </a>
                                     <a class="nav-link float-end" href="hotelsignin.php"> <b> My Account</b> </a>
                                 </div>
                             </div>
@@ -60,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] = "POST") {
             </div>
         </div>
     </div>
-    <div class="container-fluid fs-3">
+    <div class="container-fluid ">
         <div class="row ">
             <div class="col-sm-12 col-md-6 mt-5 mx-auto">
                 <div class="card form-control my-5 mt-5">
@@ -69,14 +70,15 @@ if ($_SERVER["REQUEST_METHOD"] = "POST") {
                         <div class="form-control bg-warning mb-3 text-center">
                             <h2> Please Reconfirm your details</h2>
                         </div>
-                        <div class="form-control fs-3"><?= $name ?> </div>
+                        <div class="form-control "><?= $name ?> </div>
                         <br>
-                        <div class="form-control fs-3"><?= $email ?> </div>
+                        <div class="form-control "><?= $email ?> </div>
                         <br>
-                        <div class="form-control fs-3"><?= $phone ?> </div>
+                        <div class="form-control "><?= $phone ?> </div>
                         <br>
-                        <div class="form-control fs-3"><?= $address ?> </div>
+                        <div class="form-control "><?= $address ?> </div>
                         <br>
+
 
                     </div>
                 </div>
@@ -87,20 +89,43 @@ if ($_SERVER["REQUEST_METHOD"] = "POST") {
                     </div>
                     <div class="card-body  text-center ">
 
-                        <input type="radio" name="payment" value="Transfer">
-                        <label for=""> <b>Transfer</b></label>
+                        <p class="d-inline-flex gap-1">
+                            <a class="btn btn-primary btn-lg" data-bs-toggle="collapse" href="#collapseExample"
+                                role="button" aria-expanded="false" aria-controls="collapseExample">
+                                Payment Method
+                            </a>
+
+                        </p>
+                        <div class="collapse" id="collapseExample">
+                            <div class="card card-body">
+                                <h1> <b>Transfer Details</b></h1>
+                                <h2> Marveluxe General Merchandise</h2>
+                                <h3>8164420576</h3>
+                                <h3>Moniepoint</h3>
+
+                            </div>
+                            <br>
+                            <div class="card card-body">
+                                <h1> <b>Crypto Wallet details</b></h1>
+                                <h2>Here is the crypto wallet</h2>
+                                <h3> ZRHJW73JFKJERHJWRHJ</h3>
+                            </div>
+                        </div>
 
 
-                        <input type="radio" name="payment" value="Card">
+                        <!-- <input type="radio" name="payment" value="Card">
                         <label for=""> <b>Card</b></label>
 
 
                         <input type="radio" name="payment" value="Crypto">
-                        <label for=""> <b>Crypto</b> </label>
-                        <h2 class="my-4"> Please select a payment method</h2>
+                        <label for=""> <b>Crypto</b> </label> -->
+                        <h2 class="my-4 bg-warning"> Please select a payment method and send a copy of reciept to our
+                            email once
+                            payment is made
+                        </h2>
                         <div class="text-center">
                             <button type="submit" class="btn btn-primary">
-                                <h2>submit</h2>
+                                <h5>submit</h5>
                             </button>
                         </div>
 

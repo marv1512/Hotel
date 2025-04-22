@@ -25,6 +25,7 @@
 
     #navbar {
         position: fixed;
+        z-index: 9;
 
 
 

@@ -32,25 +32,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="nav.css">
 </head>
 <style>
-    .card-head {
-        background-color: #0DCAF0;
+.card-head {
+    background-color: #0DCAF0;
 
-    }
+}
 
-    .card-footer {
-        background-color: #0DCAF0;
-    }
+.card-footer {
+    background-color: #0DCAF0;
+}
 
-    #navbar {
-        position: fixed;
-        z-index: 9;
-    }
+#navbar {
+    position: fixed;
+    z-index: 9;
+}
 
-    .body {}
+.body {}
 </style>
 
 <body>
-    <div class="row w-100  fs-2">
+    <div class="row w-100 ">
         <div>
             <h3> <?= $success ?? null; ?></h3>
         </div>
@@ -70,6 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <a class="nav-link" href="#">Recreational Services </a>
                         <a class="nav-link" href="#">Event </a>
                         <a class="nav-link" href="#"> Gallery </a>
+                        <a class="nav-link" href="bookinglogin1.php"> <b>List a property</b> </a>
                         <a class="nav-link float-end" href="hotelsignin.php"> <b> My Account</b> </a>
                     </div>
                 </div>
@@ -133,7 +134,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <div class="row  bg-dark w-100 text-center text-white mx-auto mb-5">
             <div class="col-12 ">
-                <a href="hotelbooking.php"> <button class="btn btn-danger ps-5 pe-5 p-3 mb-5"> CHECK
+                <a href="hotelbooking.php"> <button class="btn btn-danger ps-5 pe-5 p-3 mb-5 border-secondary"> CHECK
                         AVAILABILITY</button></a>
             </div>
         </div>
@@ -189,10 +190,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="text-white text-center mb-5 ">
                 <h2>Recreational Services </h2>
             </div>
-            <div class="row bg-dark mb-5">
+            <div class="row bg-dark mb-5 ">
 
-                <div class="col-6">
-                    <div class="card mb-3" style="max-width: 540px;">
+                <div class="col-lg-6 col-sm-12 ">
+                    <div class="card border border-secondary mb-3" style="max-width: 540px;">
                         <div class="row g-0">
                             <div class="col-md-4">
                                 <img src="photo/gym.webp" class="img-fluid rounded-start" alt="...">
@@ -210,8 +211,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
                 </div>
 
-                <div class="col-6">
-                    <div class="card mb-3" style="max-width: 540px;">
+                <div class="col-lg-6 col-sm-12 ">
+                    <div class="card border border-secondary mb-3" style="max-width: 540px;">
                         <div class="row g-0">
                             <div class="col-md-4">
                                 <img src="photo/swimming-pool.jpg" class="img-fluid rounded-start" alt="...">
@@ -268,8 +269,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-3">
-                <h2 style="transform: rotate(90deg); margin-top: 200px; font-size: 50px ;"> GRILLS</h2>
+            <div class="col-md-6 col-lg-3 text-center">
+                <h2 style="transform: rotate(360deg); margin-top: 200px; font-size: 50px ;"> MARVELUXE</h2>
 
             </div>
 
@@ -277,8 +278,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
         <div class="row mb-5">
-            <div class="col-lg-3 col-md-6 shadow">
-                <h2 style="transform: rotate(90deg); margin-top: 200px; font-size: 50px ;"> MARVELUXE</h2>
+            <div class="col-lg-3 col-md-6 text-center shadow">
+                <h2 style="transform: rotate(360deg); margin-top: 200px; font-size: 50px ;"> GRILL</h2>
             </div>
 
 
@@ -373,7 +374,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
 
-        <div class="row mt-5 p-3 bg-dark text-white">
+        <div class="row mt-5 p-3 bg-dark  text-white">
             <div class="col-sm-12 col-md-3 col-lg-3 mt-5">
                 <a href="hotelabout.php">About</a>
                 <br> <br>
